@@ -1,0 +1,45 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MeV – Hikoki</title><link>/tags/hikoki/</link><description>Recent content in Hikoki on MeV</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/tags/hikoki/index.xml" rel="self" type="application/rss+xml"/><item><title>Battery Service Tool: HiKOKI</title><link>/docs/battery-service-tool/hikoki/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/battery-service-tool/hikoki/</guid><description>
+&lt;p&gt;Pin &lt;strong&gt;HiKOKI&lt;/strong&gt; chỉ sử dụng chức năng &lt;strong&gt;Full Unlock&lt;/strong&gt;. Loại này không hiển thị Err Code và không có bước phân tích mã lỗi.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Lưu ý an toàn:&lt;/strong&gt; Không tiếp tục sử dụng hoặc sạc nếu pin phồng, rò rỉ, có mùi lạ hoặc nóng bất thường. Full Unlock chỉ xóa lỗi và mở khóa; chức năng này không khắc phục cell hoặc phần cứng bị hỏng.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Nguyên tắc bắt buộc:&lt;/strong&gt; Sau mỗi lần kết nối hoặc kết nối lại pin, phải chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ đọc thành công. Khi đó nút Full Unlock mới có thể thao tác.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Quy trình Full Unlock&lt;span class="hx:absolute hx:-mt-20" id="quy-trình-full-unlock"&gt;&lt;/span&gt;
+&lt;a href="#quy-tr%c3%acnh-full-unlock" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Kết nối pin HiKOKI với Battery Service Tool bằng jack phù hợp.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ thiết bị đọc dữ liệu thành công.&lt;/li&gt;
+&lt;li&gt;Kiểm tra thiết bị đã nhận đúng loại pin HiKOKI. Sau bước Read Data, nút Full Unlock mới có thể thao tác.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Reset Tools → Full Unlock&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Chờ thiết bị thông báo quá trình hoàn tất. Không tháo pin trong khi thiết bị đang xử lý.&lt;/li&gt;
+&lt;li&gt;Tháo pin khỏi Battery Service Tool và chờ vài giây.&lt;/li&gt;
+&lt;li&gt;Kết nối lại pin với thiết bị.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Read Data&lt;/strong&gt; lần nữa để kiểm tra trạng thái sau mở khóa.&lt;/li&gt;
+&lt;li&gt;Tháo pin và thử bằng bộ sạc HiKOKI phù hợp.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Nếu Read Data không thành công, nút Full Unlock sẽ chưa thể thao tác. Hãy kiểm tra lại jack kết nối, chân tiếp xúc và loại pin trước khi thử lại.&lt;/p&gt;
+&lt;h2&gt;Quy trình nhanh&lt;span class="hx:absolute hx:-mt-20" id="quy-trình-nhanh"&gt;&lt;/span&gt;
+&lt;a href="#quy-tr%c3%acnh-nhanh" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Kết nối pin HiKOKI
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Read Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Full Unlock
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Tháo pin và chờ vài giây
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Kết nối lại → Read Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Kiểm tra bằng bộ sạc HiKOKI&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

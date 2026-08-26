@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MeV – Tài liệu hướng dẫn</title><link>/docs/</link><description>Recent content in Tài liệu hướng dẫn on MeV</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Battery Service Tool: Makita LXT thường</title><link>/docs/battery-service-tool/makita-lxt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/battery-service-tool/makita-lxt/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MeV – Battery-Service-Tool</title><link>/tags/battery-service-tool/</link><description>Recent content in Battery-Service-Tool on MeV</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/tags/battery-service-tool/index.xml" rel="self" type="application/rss+xml"/><item><title>Battery Service Tool: Makita LXT thường</title><link>/docs/battery-service-tool/makita-lxt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/battery-service-tool/makita-lxt/</guid><description>
 &lt;p&gt;Tài liệu này hướng dẫn xử lý pin &lt;strong&gt;Makita LXT thường (IC ngắn, IC bé không phải loại IC dài to, F0513)&lt;/strong&gt; báo lỗi, bị khóa hoặc không nhận sạc bằng &lt;strong&gt;Battery Service Tool&lt;/strong&gt;. Với bo mạch IC dài, xem &lt;a href="../makita-lxt-f0513/"&gt;quy trình riêng cho F0513&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Cảnh báo an toàn:&lt;/strong&gt; Pin lithium-ion có thể gây cháy, nổ khi đo kiểm và sửa chữa không đúng cách. Không thao tác với pack pin phồng, rò rỉ, biến dạng, quá nóng hoặc có cell hư hỏng rõ ràng. Luôn kiểm tra đúng cực kết nối, theo dõi nhiệt độ và không sạc pin khi không có người giám sát. Các chức năng phần mềm không thể sửa cell hoặc phần cứng bị hỏng.&lt;/p&gt;
@@ -268,14 +268,7 @@ data-copied-label="Copied!"
 &lt;li&gt;Không dùng Write MSG giữa các model pin không tương thích.&lt;/li&gt;
 &lt;li&gt;Sau mỗi bước, tháo pin, kết nối lại và kiểm tra bằng bộ sạc Makita (có thể dùng lock check để kiểm tra trạng thái link).&lt;/li&gt;
 &lt;li&gt;Nếu thao tác phần mềm báo thành công nhưng pin vẫn không hoạt động, chuyển sang kiểm tra phần cứng thay vì tiếp tục reset nhiều lần.&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Chọn mạch điều khiển máy hàn cell phù hợp</title><link>/docs/may-han-cell/chon-mach-dieu-khien/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/may-han-cell/chon-mach-dieu-khien/</guid><description>
-&lt;p&gt;Một bộ điều khiển phù hợp cần cân bằng giữa khả năng tinh chỉnh, độ dễ sử dụng và cấu hình phần công suất của máy.&lt;/p&gt;
-&lt;h2&gt;Nhu cầu sử dụng&lt;span class="hx:absolute hx:-mt-20" id="nhu-cầu-sử-dụng"&gt;&lt;/span&gt;
-&lt;a href="#nhu-c%e1%ba%a7u-s%e1%bb%ad-d%e1%bb%a5ng" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Nếu thường xuyên thay đổi loại cell và độ dày lá nickel, khả năng lưu nhiều chương trình sẽ giúp tiết kiệm thời gian. Với nhu cầu cơ bản, một mạch xung kép nhỏ gọn đã đáp ứng tốt phần lớn công việc.&lt;/p&gt;
-&lt;h2&gt;Khả năng điều chỉnh&lt;span class="hx:absolute hx:-mt-20" id="khả-năng-điều-chỉnh"&gt;&lt;/span&gt;
-&lt;a href="#kh%e1%ba%a3-n%c4%83ng-%c4%91i%e1%bb%81u-ch%e1%bb%89nh" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Hãy ưu tiên thiết bị cho phép điều chỉnh độc lập thời gian và công suất của từng xung. Màn hình rõ ràng và encoder tốt giúp thao tác chính xác hơn.&lt;/p&gt;
-&lt;h2&gt;Hỗ trợ kỹ thuật&lt;span class="hx:absolute hx:-mt-20" id="hỗ-trợ-kỹ-thuật"&gt;&lt;/span&gt;
-&lt;a href="#h%e1%bb%97-tr%e1%bb%a3-k%e1%bb%b9-thu%e1%ba%adt" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Tài liệu lắp đặt, sơ đồ đấu nối và hỗ trợ sau bán hàng rất quan trọng, đặc biệt khi bạn tự xây dựng phần công suất.&lt;/p&gt;</description></item><item><title>Battery Service Tool: Makita LXT IC dài – F0513</title><link>/docs/battery-service-tool/makita-lxt-f0513/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/battery-service-tool/makita-lxt-f0513/</guid><description>
+&lt;/ul&gt;</description></item><item><title>Battery Service Tool: Makita LXT IC dài – F0513</title><link>/docs/battery-service-tool/makita-lxt-f0513/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/battery-service-tool/makita-lxt-f0513/</guid><description>
 &lt;p&gt;Quy trình xử lý pin &lt;strong&gt;Makita LXT IC dài – F0513&lt;/strong&gt; gồm hai bước: lấy mã lỗi để xác định nguyên nhân, sau đó xóa lỗi và mở khóa pin.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Lưu ý an toàn:&lt;/strong&gt; Không tiếp tục sử dụng hoặc sạc nếu pin phồng, rò rỉ, có mùi lạ hoặc nóng bất thường. Nếu kết quả phân tích cho thấy lỗi cell hoặc phần cứng, cần kiểm tra và khắc phục nguyên nhân để tránh pin bị khóa lại.&lt;/p&gt;
@@ -332,87 +325,7 @@ data-copied-label="Copied!"
 &lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
 &lt;/button&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>Hướng dẫn nhanh mạch Rồng</title><link>/docs/may-han-cell/mach-rong-huong-dan-nhanh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/may-han-cell/mach-rong-huong-dan-nhanh/</guid><description>
-&lt;figure&gt;&lt;img src="/docs/may-han-cell/mach-rong-huong-dan-nhanh/drg-3D.png"
-alt="Mạch rồng 3D"&gt;
-&lt;/figure&gt;
-&lt;h2&gt;1. Đồng bộ điện áp hiển thị trên mạch&lt;span class="hx:absolute hx:-mt-20" id="1-đồng-bộ-điện-áp-hiển-thị-trên-mạch"&gt;&lt;/span&gt;
-&lt;a href="#1-%c4%91%e1%bb%93ng-b%e1%bb%99-%c4%91i%e1%bb%87n-%c3%a1p-hi%e1%bb%83n-th%e1%bb%8b-tr%c3%aan-m%e1%ba%a1ch" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Tắt nguồn điện.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ấn giữ núm xoay&lt;/strong&gt;, sau đó &lt;strong&gt;bật nguồn&lt;/strong&gt; để vào Hệ thống&lt;/li&gt;
-&lt;li&gt;Vào mục &lt;strong&gt;Nâng cao → Chỉnh áp AC&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Chỉnh cho &lt;strong&gt;điện áp hiển thị khớp với điện áp thực tế&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Để thoát ra ngoài: Phần mềm → Khởi động&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;📝 Nên dùng nguồn &lt;strong&gt;12V AC ≥ 2A&lt;/strong&gt; để đảm bảo hiệu suất tốt nhất.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2&gt;2. Kiểm tra tín hiệu kích biến áp&lt;span class="hx:absolute hx:-mt-20" id="2-kiểm-tra-tín-hiệu-kích-biến-áp"&gt;&lt;/span&gt;
-&lt;a href="#2-ki%e1%bb%83m-tra-t%c3%adn-hi%e1%bb%87u-k%c3%adch-bi%e1%ba%bfn-%c3%a1p" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Kích hàn thử (không có pin và kẽm).&lt;/li&gt;
-&lt;li&gt;Nếu &lt;strong&gt;không có điện vào biến áp&lt;/strong&gt;, hãy &lt;strong&gt;đảo lại dây nguồn 12V AC&lt;/strong&gt; cấp vào mạch (Các dây khác giữ nguyên).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2&gt;3. Chỉnh thông số hàn&lt;span class="hx:absolute hx:-mt-20" id="3-chỉnh-thông-số-hàn"&gt;&lt;/span&gt;
-&lt;a href="#3-ch%e1%bb%89nh-th%c3%b4ng-s%e1%bb%91-h%c3%a0n" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Ví dụ hiển thị trên màn hình:&lt;/p&gt;
-&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
-&lt;div&gt;&lt;pre&gt;&lt;code&gt;SCH: 2 T: 0.20mm
-P1 25 C 70 M1 60&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
-&lt;button
-class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-title="Copy code"
-aria-label="Copy code"
-data-copied-label="Copied!"
-&gt;
-&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;h3&gt;Giải thích thông số&lt;span class="hx:absolute hx:-mt-20" id="giải-thích-thông-số"&gt;&lt;/span&gt;
-&lt;a href="#gi%e1%ba%a3i-th%c3%adch-th%c3%b4ng-s%e1%bb%91" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Quy ước ký hiệu xung:&lt;/strong&gt; Mỗi xung được ghi theo dạng &lt;code&gt;[Chữ][Số] [Công suất]&lt;/code&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Chữ cái&lt;/strong&gt; cho biết loại xung: &lt;strong&gt;P&lt;/strong&gt; = xung mồi (Pre), &lt;strong&gt;M&lt;/strong&gt; = xung chính (Main).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Chữ số ngay sau chữ cái&lt;/strong&gt; là thời gian xung, tính theo bội số &lt;strong&gt;10 ms&lt;/strong&gt;: &lt;code&gt;P1&lt;/code&gt; = 10 ms, &lt;code&gt;P2&lt;/code&gt; = 20 ms, &lt;code&gt;M1&lt;/code&gt; = 10 ms, &lt;code&gt;M2&lt;/code&gt; = 20 ms&amp;hellip;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Số đứng sau (cách một khoảng trắng)&lt;/strong&gt; là &lt;strong&gt;công suất&lt;/strong&gt;, tính theo &lt;strong&gt;%&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Ví dụ: &lt;code&gt;P1 25&lt;/code&gt; = xung mồi, thời gian &lt;strong&gt;10 ms&lt;/strong&gt;, công suất &lt;strong&gt;25%&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;🔹 SCH: 2 T: 0.20mm - Chương trình hàn&lt;span class="hx:absolute hx:-mt-20" id="-sch-2-t-020mm---chương-trình-hàn"&gt;&lt;/span&gt;
-&lt;a href="#-sch-2-t-020mm---ch%c6%b0%c6%a1ng-tr%c3%acnh-h%c3%a0n" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;SCH: 2 là chương trình hàn thứ 2 trong 6 chương trình.&lt;/li&gt;
-&lt;li&gt;T: 0.20mm là loại kẽm (khai báo tương ứng để dễ nhận diện).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;🔹 P1 25 — Xung hàn mồi (Pre)&lt;span class="hx:absolute hx:-mt-20" id="-p1-25--xung-hàn-mồi-pre"&gt;&lt;/span&gt;
-&lt;a href="#-p1-25--xung-h%c3%a0n-m%e1%bb%93i-pre" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;P&lt;/strong&gt; = xung mồi; &lt;strong&gt;1&lt;/strong&gt; = thời gian xung &lt;strong&gt;10 ms&lt;/strong&gt; (nếu &lt;code&gt;P2&lt;/code&gt; thì là 20 ms); &lt;strong&gt;25&lt;/strong&gt; = công suất &lt;strong&gt;25%&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Đây là &lt;strong&gt;xung làm mềm kẽm&lt;/strong&gt; trước khi hàn chính.&lt;/li&gt;
-&lt;li&gt;Khuyến nghị để nhỏ: &lt;strong&gt;15% – 25%&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;🔹 C 70 — Thời gian nghỉ&lt;span class="hx:absolute hx:-mt-20" id="-c-70--thời-gian-nghỉ"&gt;&lt;/span&gt;
-&lt;a href="#-c-70--th%e1%bb%9di-gian-ngh%e1%bb%89" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;C 70 = &lt;strong&gt;70 ms&lt;/strong&gt; nghỉ giữa xung mồi và xung chính.&lt;/li&gt;
-&lt;li&gt;Điều chỉnh phù hợp với biến áp vì nó liên quan đến độ đẹp của mối hàn.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;🔹 M1 60 — Xung hàn chính (Main)&lt;span class="hx:absolute hx:-mt-20" id="-m1-60--xung-hàn-chính-main"&gt;&lt;/span&gt;
-&lt;a href="#-m1-60--xung-h%c3%a0n-ch%c3%adnh-main" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;M&lt;/strong&gt; = xung chính; &lt;strong&gt;1&lt;/strong&gt; = thời gian xung &lt;strong&gt;10 ms&lt;/strong&gt; (nếu &lt;code&gt;M2&lt;/code&gt; thì là 20 ms); &lt;strong&gt;60&lt;/strong&gt; = công suất &lt;strong&gt;60%&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Đây là &lt;strong&gt;xung hàn chính&lt;/strong&gt;, ảnh hưởng trực tiếp đến độ ngấu.&lt;/li&gt;
-&lt;li&gt;Nên chỉnh cao hơn P1 và tùy theo độ dày kẽm.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;4. Video/ Link&lt;span class="hx:absolute hx:-mt-20" id="4-video-link"&gt;&lt;/span&gt;
-&lt;a href="#4-video-link" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Hướng dẫn chi tiết: &lt;a href="/docs/may-han-cell/mach-rong-chi-tiet/"&gt;Tài liệu&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Video nối SCR: &lt;a href="https://www.youtube.com/watch?v=M3AvCFaGgWk"target="_blank" rel="noopener"&gt;youtube&lt;/a&gt; / &lt;a href="https://www.tiktok.com/@megavon.net/video/7287894647702064402"target="_blank" rel="noopener"&gt;tiktok&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Video nối mạch: &lt;a href="https://www.youtube.com/watch?v=P7BlRbaLrLs"target="_blank" rel="noopener"&gt;youtube&lt;/a&gt; / &lt;a href="https://www.tiktok.com/@megavon.net/video/7288524798681156872"target="_blank" rel="noopener"&gt;tiktok&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Liên hệ My My: &lt;a href="https://www.facebook.com/my.my.63808"target="_blank" rel="noopener"&gt;facebook&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Gợi ý:&lt;/strong&gt; Mỗi biến áp khác nhau sẽ có một thông số khác nhau, cho nên cần chỉnh theo nguyên lý. Sau đó hàn thử và điều chỉnh phù hợp cho đến khi đạt được kết quả tối ưu.&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>Battery Service Tool: Makita XGT</title><link>/docs/battery-service-tool/makita-xgt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/battery-service-tool/makita-xgt/</guid><description>
+&lt;/div&gt;</description></item><item><title>Battery Service Tool: Makita XGT</title><link>/docs/battery-service-tool/makita-xgt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/battery-service-tool/makita-xgt/</guid><description>
 &lt;p&gt;Pin &lt;strong&gt;Makita XGT&lt;/strong&gt; chỉ sử dụng chức năng &lt;strong&gt;Full Unlock&lt;/strong&gt;. Loại này không hiển thị Err Code và không có bước phân tích mã lỗi.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Lưu ý an toàn:&lt;/strong&gt; Không tiếp tục sử dụng hoặc sạc nếu pin phồng, rò rỉ, có mùi lạ hoặc nóng bất thường. Full Unlock chỉ xóa lỗi và mở khóa; chức năng này không khắc phục cell hoặc phần cứng bị hỏng.&lt;/p&gt;
@@ -456,18 +369,7 @@ data-copied-label="Copied!"
 &lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
 &lt;/button&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>Hướng dẫn chi tiết mạch Rồng</title><link>/docs/may-han-cell/mach-rong-chi-tiet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/may-han-cell/mach-rong-chi-tiet/</guid><description>
-&lt;p&gt;&lt;a href="drg.docx"&gt;Tải tài liệu định dạng Word&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="/docs/may-han-cell/mach-rong-chi-tiet/drg-01.png" alt="" loading="lazy" /&gt;
-&lt;img src="/docs/may-han-cell/mach-rong-chi-tiet/drg-02.png" alt="" loading="lazy" /&gt;
-&lt;img src="/docs/may-han-cell/mach-rong-chi-tiet/drg-03.png" alt="" loading="lazy" /&gt;
-&lt;img src="/docs/may-han-cell/mach-rong-chi-tiet/drg-04.png" alt="" loading="lazy" /&gt;
-&lt;img src="/docs/may-han-cell/mach-rong-chi-tiet/drg-05.png" alt="" loading="lazy" /&gt;
-&lt;img src="/docs/may-han-cell/mach-rong-chi-tiet/drg-06.png" alt="" loading="lazy" /&gt;
-&lt;img src="/docs/may-han-cell/mach-rong-chi-tiet/drg-07.png" alt="" loading="lazy" /&gt;
-&lt;img src="/docs/may-han-cell/mach-rong-chi-tiet/drg-08.png" alt="" loading="lazy" /&gt;
-&lt;img src="/docs/may-han-cell/mach-rong-chi-tiet/drg-09.png" alt="" loading="lazy" /&gt;
-&lt;img src="/docs/may-han-cell/mach-rong-chi-tiet/drg-10.png" alt="" loading="lazy" /&gt;&lt;/p&gt;</description></item><item><title>Battery Service Tool: HiKOKI</title><link>/docs/battery-service-tool/hikoki/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/battery-service-tool/hikoki/</guid><description>
+&lt;/div&gt;</description></item><item><title>Battery Service Tool: HiKOKI</title><link>/docs/battery-service-tool/hikoki/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/battery-service-tool/hikoki/</guid><description>
 &lt;p&gt;Pin &lt;strong&gt;HiKOKI&lt;/strong&gt; chỉ sử dụng chức năng &lt;strong&gt;Full Unlock&lt;/strong&gt;. Loại này không hiển thị Err Code và không có bước phân tích mã lỗi.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Lưu ý an toàn:&lt;/strong&gt; Không tiếp tục sử dụng hoặc sạc nếu pin phồng, rò rỉ, có mùi lạ hoặc nóng bất thường. Full Unlock chỉ xóa lỗi và mở khóa; chức năng này không khắc phục cell hoặc phần cứng bị hỏng.&lt;/p&gt;
@@ -511,170 +413,4 @@ data-copied-label="Copied!"
 &lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
 &lt;/button&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>Hướng dẫn sử dụng nút chỉnh trụ Z mạch rồng</title><link>/docs/may-han-cell/mach-rong-chinh-tru-z/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/may-han-cell/mach-rong-chinh-tru-z/</guid><description>
-&lt;figure&gt;&lt;img src="/docs/may-han-cell/mach-rong-chinh-tru-z/drg-3D.png"
-alt="Chỉnh Z Mạch rồng"&gt;
-&lt;/figure&gt;
-&lt;h2&gt;🔩 Điều khiển trụ Z – cốt lõi để chỉnh lực hàn cell pin cho chuẩn&lt;span class="hx:absolute hx:-mt-20" id="-điều-khiển-trụ-z--cốt-lõi-để-chỉnh-lực-hàn-cell-pin-cho-chuẩn"&gt;&lt;/span&gt;
-&lt;a href="#-%c4%91i%e1%bb%81u-khi%e1%bb%83n-tr%e1%bb%a5-z--c%e1%bb%91t-l%c3%b5i-%c4%91%e1%bb%83-ch%e1%bb%89nh-l%e1%bb%b1c-h%c3%a0n-cell-pin-cho-chu%e1%ba%a9n" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Rất nhiều anh em khi làm máy hàn cell pin hay nhầm lẫn giữa &lt;strong&gt;hành trình trụ Z&lt;/strong&gt; và &lt;strong&gt;lực nén kim hàn&lt;/strong&gt;.&lt;br&gt;
-Thực tế, thứ quyết định mối hàn &lt;strong&gt;ăn hay không&lt;/strong&gt; lại chính là &lt;strong&gt;lực nén&lt;/strong&gt;, còn hành trình chỉ là hiện tượng đi kèm.&lt;/p&gt;
-&lt;p&gt;👉 Vì vậy, cách điều khiển trụ Z cần xoay quanh &lt;strong&gt;việc kiểm soát lực&lt;/strong&gt;, không phải chạy theo hành trình.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Qua thực nghiệm: Tổng lực nén cho cả 2 kim hàn nên là khoảng 3.6 kg đến 4 kg. Lực nén mạnh hơn hàn sẽ khó ăn, nhưng yếu hơn thì dễ bị nổ kim do kẽm không đủ lực ép kẽm xuống bề mặt pin&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2&gt;💡 Nguyên lý điều khiển trụ Z&lt;span class="hx:absolute hx:-mt-20" id="-nguyên-lý-điều-khiển-trụ-z"&gt;&lt;/span&gt;
-&lt;a href="#-nguy%c3%aan-l%c3%bd-%c4%91i%e1%bb%81u-khi%e1%bb%83n-tr%e1%bb%a5-z" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;🔽 Nút đi xuống (DOWN)&lt;span class="hx:absolute hx:-mt-20" id="-nút-đi-xuống-down"&gt;&lt;/span&gt;
-&lt;a href="#-n%c3%bat-%c4%91i-xu%e1%bb%91ng-down" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Nhấn và giữ nút &lt;strong&gt;DOWN&lt;/strong&gt; → trụ Z đi xuống &lt;strong&gt;liền mạch, mượt&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Thả tay ra → trụ Z &lt;strong&gt;dừng ngay lập tức&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Giúp người dùng &lt;strong&gt;canh lực nén chính xác&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;🔼 Nút đi lên (UP)&lt;span class="hx:absolute hx:-mt-20" id="-nút-đi-lên-up"&gt;&lt;/span&gt;
-&lt;a href="#-n%c3%bat-%c4%91i-l%c3%aan-up" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Nhấn và giữ nút &lt;strong&gt;UP&lt;/strong&gt; → trụ Z đi lên đúng &lt;strong&gt;1 hành trình kích hàn&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Sau đó &lt;strong&gt;tự động dừng khoảng 2 giây&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Nếu trong thời gian dừng &lt;strong&gt;vẫn giữ nút UP&lt;/strong&gt; → trụ Z sẽ &lt;strong&gt;đi lên tiếp liên tục&lt;/strong&gt; và &lt;strong&gt;không dừng lại&lt;/strong&gt; cho đến khi thả nút&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2&gt;⚙️ Vì sao phải làm như vậy?&lt;span class="hx:absolute hx:-mt-20" id="-vì-sao-phải-làm-như-vậy"&gt;&lt;/span&gt;
-&lt;a href="#-v%c3%ac-sao-ph%e1%ba%a3i-l%c3%a0m-nh%c6%b0-v%e1%ba%ady" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Trong hàn cell pin:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Lực nén kim hàn&lt;/strong&gt; là yếu tố quyết định:
-&lt;ul&gt;
-&lt;li&gt;Mối hàn ăn sâu hay không&lt;/li&gt;
-&lt;li&gt;Có cháy kẽm hay không&lt;/li&gt;
-&lt;li&gt;Độ ổn định giữa các mối hàn&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hành trình trụ Z&lt;/strong&gt; chỉ là hệ quả của việc tạo ra lực đó&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;👉 Do đó:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Lấy lực nén làm gốc – hành trình chỉ để tham chiếu&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2&gt;🛠️ Cách chỉnh lực nén chuẩn trong thực tế&lt;span class="hx:absolute hx:-mt-20" id="-cách-chỉnh-lực-nén-chuẩn-trong-thực-tế"&gt;&lt;/span&gt;
-&lt;a href="#-c%c3%a1ch-ch%e1%bb%89nh-l%e1%bb%b1c-n%c3%a9n-chu%e1%ba%a9n-trong-th%e1%bb%b1c-t%e1%ba%bf" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;Nhấn &lt;strong&gt;DOWN&lt;/strong&gt; cho trụ Z đi xuống&lt;/li&gt;
-&lt;li&gt;Khi kim hàn chạm kẽm, tiếp tục nén đến &lt;strong&gt;lực mong muốn&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;Có thể dùng &lt;strong&gt;cái cân&lt;/strong&gt; để đo lực nén&lt;/li&gt;
-&lt;li&gt;Đánh dấu &lt;strong&gt;độ nén trên cân lực&lt;/strong&gt; - (khoảng dịch chuyển do lò so bị nén)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Khi đã đạt lực chuẩn → nhấn giữ &lt;strong&gt;UP&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Trụ Z sẽ:
-&lt;ul&gt;
-&lt;li&gt;Đi lên đúng &lt;strong&gt;1 hành trình kích hàn&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tự dừng&lt;/strong&gt; tại vị trí này&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;✅ &lt;strong&gt;Vị trí dừng đó chính là “điểm chuẩn” để hàn&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;🔥 Kết luận&lt;span class="hx:absolute hx:-mt-20" id="-kết-luận"&gt;&lt;/span&gt;
-&lt;a href="#-k%e1%ba%bft-lu%e1%ba%adn" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Chỉnh đúng &lt;strong&gt;lực nén&lt;/strong&gt; → mối hàn ổn định&lt;/li&gt;
-&lt;li&gt;Không phụ thuộc vào cảm giác tay hay hành trình ước lượng&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Khi lực đã đúng, mọi thứ còn lại sẽ trở nên đơn giản.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;p&gt;📌 &lt;em&gt;Bài viết chia sẻ kinh nghiệm thực tế cho anh em làm pin.&lt;br&gt;
-Nếu thấy hữu ích, cứ lưu lại hoặc chia sẻ cho người cần.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Hướng dẫn nhanh mạch MVS01</title><link>/docs/may-han-cell/mvs01-huong-dan-nhanh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/may-han-cell/mvs01-huong-dan-nhanh/</guid><description>
-&lt;figure&gt;&lt;img src="/docs/may-han-cell/mvs01-huong-dan-nhanh/cover.jpg"
-alt="Mạch MVS01-SDWF"&gt;
-&lt;/figure&gt;
-&lt;h2&gt;1. Đồng bộ điện áp hiển thị trên mạch&lt;span class="hx:absolute hx:-mt-20" id="1-đồng-bộ-điện-áp-hiển-thị-trên-mạch"&gt;&lt;/span&gt;
-&lt;a href="#1-%c4%91%e1%bb%93ng-b%e1%bb%99-%c4%91i%e1%bb%87n-%c3%a1p-hi%e1%bb%83n-th%e1%bb%8b-tr%c3%aan-m%e1%ba%a1ch" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Tắt nguồn điện.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ấn giữ núm xoay&lt;/strong&gt;, sau đó &lt;strong&gt;bật nguồn&lt;/strong&gt; để vào Setup&lt;/li&gt;
-&lt;li&gt;Tại vol Calib: Chỉnh cho &lt;strong&gt;điện áp hiển thị bằng với điện áp thực tế&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Để lưu và thoát: Đạp cóc → Khởi động&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2&gt;2. Chỉnh thông số hàn&lt;span class="hx:absolute hx:-mt-20" id="2-chỉnh-thông-số-hàn"&gt;&lt;/span&gt;
-&lt;a href="#2-ch%e1%bb%89nh-th%c3%b4ng-s%e1%bb%91-h%c3%a0n" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Ví dụ hiển thị trên màn hình:&lt;/p&gt;
-&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
-&lt;div&gt;&lt;pre&gt;&lt;code&gt;Vol: 220 W: 82
-P1 25 C 50 M1 60&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
-&lt;button
-class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-title="Copy code"
-aria-label="Copy code"
-data-copied-label="Copied!"
-&gt;
-&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;h3&gt;Giải thích thông số&lt;span class="hx:absolute hx:-mt-20" id="giải-thích-thông-số"&gt;&lt;/span&gt;
-&lt;a href="#gi%e1%ba%a3i-th%c3%adch-th%c3%b4ng-s%e1%bb%91" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Quy ước ký hiệu xung:&lt;/strong&gt; Mỗi xung được ghi theo dạng &lt;code&gt;[Chữ][Số] [Công suất]&lt;/code&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Chữ cái&lt;/strong&gt; cho biết loại xung: &lt;strong&gt;P&lt;/strong&gt; = xung mồi (Pre), &lt;strong&gt;M&lt;/strong&gt; = xung chính (Main).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Chữ số ngay sau chữ cái&lt;/strong&gt; là thời gian xung, tính theo bội số &lt;strong&gt;10 ms&lt;/strong&gt;: &lt;code&gt;P1&lt;/code&gt; = 10 ms, &lt;code&gt;P2&lt;/code&gt; = 20 ms, &lt;code&gt;M1&lt;/code&gt; = 10 ms, &lt;code&gt;M2&lt;/code&gt; = 20 ms&amp;hellip;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Số đứng sau (cách một khoảng trắng)&lt;/strong&gt; là &lt;strong&gt;công suất&lt;/strong&gt;, tính theo &lt;strong&gt;%&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Ví dụ: &lt;code&gt;P1 25&lt;/code&gt; = xung mồi, thời gian &lt;strong&gt;10 ms&lt;/strong&gt;, công suất &lt;strong&gt;25%&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;🔹 Vol: 220 W: 82 - Thông tin&lt;span class="hx:absolute hx:-mt-20" id="-vol-220-w-----82---thông-tin"&gt;&lt;/span&gt;
-&lt;a href="#-vol-220-w-----82---th%c3%b4ng-tin" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;Vol: 220 là đồng hồ hiển thị điện lưới.&lt;/li&gt;
-&lt;li&gt;W: 80 là bộ đếm số lần hàn.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;🔹 P1 25 — Xung hàn mồi (Pre)&lt;span class="hx:absolute hx:-mt-20" id="-p1-25--xung-hàn-mồi-pre"&gt;&lt;/span&gt;
-&lt;a href="#-p1-25--xung-h%c3%a0n-m%e1%bb%93i-pre" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;P&lt;/strong&gt; = xung mồi; &lt;strong&gt;1&lt;/strong&gt; = thời gian xung &lt;strong&gt;10 ms&lt;/strong&gt; (nếu &lt;code&gt;P2&lt;/code&gt; thì là 20 ms); &lt;strong&gt;25&lt;/strong&gt; = công suất &lt;strong&gt;25%&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Đây là &lt;strong&gt;xung làm mềm kẽm&lt;/strong&gt; trước khi hàn chính.&lt;/li&gt;
-&lt;li&gt;Khuyến nghị để nhỏ: &lt;strong&gt;15% – 25%&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;🔹 C 50 — Thời gian nghỉ&lt;span class="hx:absolute hx:-mt-20" id="-c-50--thời-gian-nghỉ"&gt;&lt;/span&gt;
-&lt;a href="#-c-50--th%e1%bb%9di-gian-ngh%e1%bb%89" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;C 50 = &lt;strong&gt;50 ms&lt;/strong&gt; nghỉ giữa xung mồi và xung chính.&lt;/li&gt;
-&lt;li&gt;Điều chỉnh phù hợp với biến áp vì nó liên quan đến độ đẹp của mối hàn.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;🔹 M1 60 — Xung hàn chính (Main)&lt;span class="hx:absolute hx:-mt-20" id="-m1-60--xung-hàn-chính-main"&gt;&lt;/span&gt;
-&lt;a href="#-m1-60--xung-h%c3%a0n-ch%c3%adnh-main" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;M&lt;/strong&gt; = xung chính; &lt;strong&gt;1&lt;/strong&gt; = thời gian xung &lt;strong&gt;10 ms&lt;/strong&gt; (nếu &lt;code&gt;M2&lt;/code&gt; thì là 20 ms); &lt;strong&gt;60&lt;/strong&gt; = công suất &lt;strong&gt;60%&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Đây là &lt;strong&gt;xung hàn chính&lt;/strong&gt;, ảnh hưởng trực tiếp đến độ ngấu.&lt;/li&gt;
-&lt;li&gt;Nên chỉnh cao hơn P1 và tùy theo độ dày kẽm.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;3. Video/ Link&lt;span class="hx:absolute hx:-mt-20" id="3-video-link"&gt;&lt;/span&gt;
-&lt;a href="#3-video-link" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Hướng dẫn chi tiết Mạch Rồng: &lt;a href="/docs/may-han-cell/mach-rong-chi-tiet/"&gt;Tài liệu&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Cách chọn BTA100: &lt;a href="/docs/may-han-cell/chon-bta100/"&gt;Tài liệu&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Liên hệ My My: &lt;a href="https://www.facebook.com/my.my.63808"target="_blank" rel="noopener"&gt;facebook&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Gợi ý:&lt;/strong&gt; Mỗi biến áp khác nhau sẽ có một thông số khác nhau, cho nên cần chỉnh theo nguyên lý. Sau đó hàn thử và điều chỉnh phù hợp cho đến khi đạt được kết quả tối ưu.&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>Hướng dẫn chọn mua BTA100</title><link>/docs/may-han-cell/chon-bta100/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/may-han-cell/chon-bta100/</guid><description>
-&lt;h2&gt;Giới thiệu&lt;span class="hx:absolute hx:-mt-20" id="giới-thiệu"&gt;&lt;/span&gt;
-&lt;a href="#gi%e1%bb%9bi-thi%e1%bb%87u" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Triac &lt;strong&gt;BTA100&lt;/strong&gt; được dùng nhiều trong các thiết bị công suất như máy hàn cell, bộ điều khiển tải AC… Tuy nhiên thị trường hiện có rất nhiều loại không rõ nguồn gốc, rất dễ mua nhầm hàng kém chất lượng. Dưới đây là kinh nghiệm rút ra từ quá trình test thực tế.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;1. Hãng ST KHÔNG sản xuất BTA100&lt;span class="hx:absolute hx:-mt-20" id="1-hãng-st-không-sản-xuất-bta100"&gt;&lt;/span&gt;
-&lt;a href="#1-h%c3%a3ng-st-kh%c3%b4ng-s%e1%ba%a3n-xu%e1%ba%a5t-bta100" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="/docs/may-han-cell/chon-bta100/ST-fake.jpg" alt="BTA100 logo ST (hàng giả)" loading="lazy" /&gt;&lt;/p&gt;
-&lt;p&gt;Trên thị trường có nhiều BTA100 được khắc laze &lt;strong&gt;logo hãng ST&lt;/strong&gt; (giả dạng hãng sản xuất linh kiện uy tín). Nếu thấy BTA100 in &lt;strong&gt;logo ST&lt;/strong&gt;, cho dù chữ in sắc nét tới đâu thì &lt;strong&gt;100% là hàng giả&lt;/strong&gt;. Vì dòng BTA100 &lt;strong&gt;không hề&lt;/strong&gt; nằm trong danh mục sản phẩm của hãng STMicroelectronics.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;2. BTA100 dập chìm HSDO&lt;span class="hx:absolute hx:-mt-20" id="2-bta100-dập-chìm-hsdo"&gt;&lt;/span&gt;
-&lt;a href="#2-bta100-d%e1%ba%adp-ch%c3%acm-hsdo" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;BTA100 có xuất xứ TQ, chủ yếu do hãng HSDO sản xuất. Loại này dập chìm &lt;strong&gt;HSDO&lt;/strong&gt; không phải hàng giả, nhưng &lt;strong&gt;chất lượng không đồng nhất&lt;/strong&gt;. Mỗi shop nhập từ một nguồn khác nhau: có shop lấy loại 1, có shop lấy loại 2–3 nên chất lượng cũng khác nhau.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;3. Loại BTA100 đề xuất&lt;span class="hx:absolute hx:-mt-20" id="3-loại-bta100-đề-xuất"&gt;&lt;/span&gt;
-&lt;a href="#3-lo%e1%ba%a1i-bta100-%c4%91%e1%bb%81-xu%e1%ba%a5t" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="/docs/may-han-cell/chon-bta100/real.jpg" alt="Ảnh BTA100 đề xuất" loading="lazy" /&gt;&lt;/p&gt;
-&lt;p&gt;Qua quá trình mua thử nghiệm và kiểm chứng thực tế trong các máy hàn cell, mình và các anh em kỹ thuật đã xác định được một số nguồn BTA100 tốt và ổn định mà anh em có thể yên tâm tham khảo.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;🔗 Link sản phẩm:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://s.shopee.vn/4ArshrZxlQ"target="_blank" rel="noopener"&gt;https://s.shopee.vn/4ArshrZxlQ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Phân loại sản phẩm nên chọn: 1200V&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;4. Lời khuyên nhanh&lt;span class="hx:absolute hx:-mt-20" id="4-lời-khuyên-nhanh"&gt;&lt;/span&gt;
-&lt;a href="#4-l%e1%bb%9di-khuy%c3%aan-nhanh" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Không mua BTA100 logo &lt;strong&gt;ST&lt;/strong&gt; (vì hàng fake 100%)&lt;/li&gt;
-&lt;li&gt;Với HSDO: chọn shop uy tín theo danh sách bên trên.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;</description></item></channel></rss>
+&lt;/div&gt;</description></item></channel></rss>

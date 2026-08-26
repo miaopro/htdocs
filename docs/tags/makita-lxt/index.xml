@@ -1,0 +1,328 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MeV – Makita-Lxt</title><link>/tags/makita-lxt/</link><description>Recent content in Makita-Lxt on MeV</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/tags/makita-lxt/index.xml" rel="self" type="application/rss+xml"/><item><title>Battery Service Tool: Makita LXT thường</title><link>/docs/battery-service-tool/makita-lxt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/battery-service-tool/makita-lxt/</guid><description>
+&lt;p&gt;Tài liệu này hướng dẫn xử lý pin &lt;strong&gt;Makita LXT thường (IC ngắn, IC bé không phải loại IC dài to, F0513)&lt;/strong&gt; báo lỗi, bị khóa hoặc không nhận sạc bằng &lt;strong&gt;Battery Service Tool&lt;/strong&gt;. Với bo mạch IC dài, xem &lt;a href="../makita-lxt-f0513/"&gt;quy trình riêng cho F0513&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Cảnh báo an toàn:&lt;/strong&gt; Pin lithium-ion có thể gây cháy, nổ khi đo kiểm và sửa chữa không đúng cách. Không thao tác với pack pin phồng, rò rỉ, biến dạng, quá nóng hoặc có cell hư hỏng rõ ràng. Luôn kiểm tra đúng cực kết nối, theo dõi nhiệt độ và không sạc pin khi không có người giám sát. Các chức năng phần mềm không thể sửa cell hoặc phần cứng bị hỏng.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Nguyên tắc bắt buộc:&lt;/strong&gt; Sau mỗi lần kết nối hoặc kết nối lại pin, phải chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ đọc thành công. Khi đó các nút chức năng như Quick Reset, Full Unlock, Charger Reconnect, Factory Reset, Write MSG, Set Cycles và Lock Test mới có thể thao tác.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;1. Trước khi bắt đầu&lt;span class="hx:absolute hx:-mt-20" id="1-trước-khi-bắt-đầu"&gt;&lt;/span&gt;
+&lt;a href="#1-tr%c6%b0%e1%bb%9bc-khi-b%e1%ba%aft-%c4%91%e1%ba%a7u" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Kết nối pin với Battery Service Tool bằng jack kết nối LXT đi kèm.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ thiết bị đọc dữ liệu thành công.&lt;/li&gt;
+&lt;li&gt;Kiểm tra thông tin sơ bộ về trạng thái pin và phần cứng.&lt;/li&gt;
+&lt;li&gt;Nếu có vấn đề như lệch áp, đứt chân kết nối hoặc lỗi phần cứng khác, cần khắc phục trước khi thực hiện chức năng reset hoặc mở khóa.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;2. Trình tự xử lý khuyến nghị&lt;span class="hx:absolute hx:-mt-20" id="2-trình-tự-xử-lý-khuyến-nghị"&gt;&lt;/span&gt;
+&lt;a href="#2-tr%c3%acnh-t%e1%bb%b1-x%e1%bb%ad-l%c3%bd-khuy%e1%ba%bfn-ngh%e1%bb%8b" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Thực hiện từ mức can thiệp thấp đến cao. Chỉ chuyển sang bước tiếp theo khi bước trước không khắc phục được lỗi.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: right"&gt;Thứ tự&lt;/th&gt;
+&lt;th&gt;Chức năng&lt;/th&gt;
+&lt;th&gt;Mục đích&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right"&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Read Data&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Đọc và ghi nhận trạng thái ban đầu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right"&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Quick Reset&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Xóa lỗi ở mức ít can thiệp nhất&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right"&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Full Unlock&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Xóa trạng thái lỗi và mở khóa sâu hơn&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right"&gt;4&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Charger Reconnect&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Khôi phục giao tiếp giữa pin và bộ sạc Makita&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right"&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Factory Reset&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Can thiệp sâu vào dữ liệu reset; ưu tiên &lt;strong&gt;1. Min&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right"&gt;6&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Read MSG / Write MSG&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Sao chép dữ liệu tương thích từ một pin tốt&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right"&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Kiểm tra phần cứng&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Tìm lỗi cell, cảm biến, cầu chì, mối hàn và đường giao tiếp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Sau mỗi lần tháo và kết nối lại pin với Battery Service Tool, phải chọn &lt;strong&gt;Read Data&lt;/strong&gt; lần nữa trước khi chuyển sang chức năng tiếp theo.&lt;/p&gt;
+&lt;h2&gt;3. Quick Reset&lt;span class="hx:absolute hx:-mt-20" id="3-quick-reset"&gt;&lt;/span&gt;
+&lt;a href="#3-quick-reset" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Quick Reset&lt;/strong&gt; tương đương chức năng &lt;strong&gt;Clear Errors&lt;/strong&gt; trên ứng dụng máy tính. Đây là lựa chọn nên thử đầu tiên vì thực hiện nhanh và ít ảnh hưởng đến dữ liệu đang lưu trong pin.&lt;/p&gt;
+&lt;h3&gt;Khi nào nên sử dụng?&lt;span class="hx:absolute hx:-mt-20" id="khi-nào-nên-sử-dụng"&gt;&lt;/span&gt;
+&lt;a href="#khi-n%c3%a0o-n%c3%aan-s%e1%bb%ad-d%e1%bb%a5ng" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Pin mới xuất hiện lỗi hoặc đột nhiên không nhận sạc.&lt;/li&gt;
+&lt;li&gt;Pin bị khóa tạm thời.&lt;/li&gt;
+&lt;li&gt;Chưa xác định được chính xác nguyên nhân.&lt;/li&gt;
+&lt;li&gt;Muốn thử phương án ít can thiệp trước khi dùng chức năng nâng cao.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cách thực hiện&lt;span class="hx:absolute hx:-mt-20" id="cách-thực-hiện"&gt;&lt;/span&gt;
+&lt;a href="#c%c3%a1ch-th%e1%bb%b1c-hi%e1%bb%87n" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Kết nối pin với thiết bị.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ đọc thành công để các nút chức năng được kích hoạt.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Reset Tools → Quick Reset&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Chờ thiết bị thông báo hoàn tất.&lt;/li&gt;
+&lt;li&gt;Tháo pin, kết nối lại và thử bằng bộ sạc Makita.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Nếu lỗi vẫn còn, chuyển sang &lt;strong&gt;Full Unlock&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;4. Full Unlock&lt;span class="hx:absolute hx:-mt-20" id="4-full-unlock"&gt;&lt;/span&gt;
+&lt;a href="#4-full-unlock" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Full Unlock&lt;/strong&gt; xóa trạng thái lỗi và mở khóa pin ở mức sâu hơn Quick Reset.&lt;/p&gt;
+&lt;h3&gt;Khi nào nên sử dụng?&lt;span class="hx:absolute hx:-mt-20" id="khi-nào-nên-sử-dụng-1"&gt;&lt;/span&gt;
+&lt;a href="#khi-n%c3%a0o-n%c3%aan-s%e1%bb%ad-d%e1%bb%a5ng-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Pin vẫn báo lỗi sau Quick Reset.&lt;/li&gt;
+&lt;li&gt;Pin đang bị khóa và không hoạt động.&lt;/li&gt;
+&lt;li&gt;Pin không nhận sạc trên bộ sạc Makita.&lt;/li&gt;
+&lt;li&gt;Lỗi xuất hiện lại ngay sau Quick Reset.&lt;/li&gt;
+&lt;li&gt;Quick Reset hoàn tất nhưng trạng thái pin không thay đổi.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cách thực hiện&lt;span class="hx:absolute hx:-mt-20" id="cách-thực-hiện-1"&gt;&lt;/span&gt;
+&lt;a href="#c%c3%a1ch-th%e1%bb%b1c-hi%e1%bb%87n-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Kết nối pin, chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ đọc thành công.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Reset Tools → Full Unlock&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Chờ thiết bị hoàn tất quá trình mở khóa.&lt;/li&gt;
+&lt;li&gt;Tháo pin, kết nối lại và thử bằng bộ sạc Makita.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Nếu thiết bị báo mở khóa thành công nhưng pin vẫn không giao tiếp hoặc không nhận sạc, tiếp tục với &lt;strong&gt;Charger Reconnect&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;5. Charger Reconnect&lt;span class="hx:absolute hx:-mt-20" id="5-charger-reconnect"&gt;&lt;/span&gt;
+&lt;a href="#5-charger-reconnect" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Đường dẫn trên thiết bị: &lt;strong&gt;Reset Tools → Advanced → Charger Reconnect&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Chức năng này khôi phục trạng thái giao tiếp và nhận dạng giữa pin với bộ sạc Makita.&lt;/p&gt;
+&lt;h3&gt;Khi nào nên sử dụng?&lt;span class="hx:absolute hx:-mt-20" id="khi-nào-nên-sử-dụng-2"&gt;&lt;/span&gt;
+&lt;a href="#khi-n%c3%a0o-n%c3%aan-s%e1%bb%ad-d%e1%bb%a5ng-2" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Pin đã mở khóa thành công nhưng vẫn không nhận sạc trên bộ sạc Makita.&lt;/li&gt;
+&lt;li&gt;Pin sạc được bằng phương pháp khác nhưng không sạc được bằng bộ sạc Makita.&lt;/li&gt;
+&lt;li&gt;Bộ sạc, ví dụ &lt;strong&gt;DC18RC&lt;/strong&gt;, nháy đèn đỏ và xanh liên tục.&lt;/li&gt;
+&lt;li&gt;Pin đã reset nhưng không hoàn tất quá trình nhận dạng với bộ sạc.&lt;/li&gt;
+&lt;li&gt;Full Unlock thành công nhưng giao tiếp với bộ sạc vẫn chưa bình thường.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cách thực hiện&lt;span class="hx:absolute hx:-mt-20" id="cách-thực-hiện-2"&gt;&lt;/span&gt;
+&lt;a href="#c%c3%a1ch-th%e1%bb%b1c-hi%e1%bb%87n-2" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Kết nối pin, chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ đọc thành công.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Reset Tools → Advanced → Charger Reconnect&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Chờ thiết bị thông báo hoàn tất.&lt;/li&gt;
+&lt;li&gt;Tháo pin khỏi thiết bị và chờ vài giây.&lt;/li&gt;
+&lt;li&gt;Lắp pin vào bộ sạc Makita để kiểm tra.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Nếu pin vẫn không nhận sạc&lt;span class="hx:absolute hx:-mt-20" id="nếu-pin-vẫn-không-nhận-sạc"&gt;&lt;/span&gt;
+&lt;a href="#n%e1%ba%bfu-pin-v%e1%ba%abn-kh%c3%b4ng-nh%e1%ba%adn-s%e1%ba%a1c" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Không nên lặp lại thao tác reset quá nhiều lần. Ghi nhận trạng thái đèn báo và kiểm tra:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Điện áp từng nhóm cell và độ lệch điện áp giữa các nhóm.&lt;/li&gt;
+&lt;li&gt;Điểm tiếp xúc giữa bo mạch BMS và cell pin.&lt;/li&gt;
+&lt;li&gt;Cầu chì và các linh kiện bảo vệ trên bo mạch.&lt;/li&gt;
+&lt;li&gt;Mối hàn tại các đầu kết nối; kiểm tra nứt hoặc đứt ngầm.&lt;/li&gt;
+&lt;li&gt;Cảm biến nhiệt độ.&lt;/li&gt;
+&lt;li&gt;Đường tín hiệu giao tiếp với bộ sạc.&lt;/li&gt;
+&lt;li&gt;Dây dẫn bên trong pack pin.&lt;/li&gt;
+&lt;li&gt;Chân tiếp xúc bị oxy hóa, bẩn hoặc lỏng.&lt;/li&gt;
+&lt;li&gt;Đường mạch hoặc linh kiện có dấu hiệu hư hỏng.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nếu phần cứng đã được xác nhận an toàn và phù hợp, có thể tiếp tục với &lt;strong&gt;Factory Reset&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;6. Factory Reset&lt;span class="hx:absolute hx:-mt-20" id="6-factory-reset"&gt;&lt;/span&gt;
+&lt;a href="#6-factory-reset" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Tên hiển thị trên thiết bị: &lt;strong&gt;F.Reset&lt;/strong&gt;. Đây là chức năng can thiệp sâu hơn vào dữ liệu reset của pin và chỉ nên sử dụng sau khi Quick Reset, Full Unlock và Charger Reconnect không hiệu quả.&lt;/p&gt;
+&lt;h3&gt;Các chế độ&lt;span class="hx:absolute hx:-mt-20" id="các-chế-độ"&gt;&lt;/span&gt;
+&lt;a href="#c%c3%a1c-ch%e1%ba%bf-%c4%91%e1%bb%99" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chế độ&lt;/th&gt;
+&lt;th&gt;Mô tả&lt;/th&gt;
+&lt;th&gt;Khuyến nghị&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;1. Min&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Reset ở mức tối thiểu&lt;/td&gt;
+&lt;td&gt;Luôn thử trước&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;2. Std&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Áp dụng mẫu reset &lt;code&gt;0xC&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Chỉ dùng khi đã xác định mẫu phù hợp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;3. Max&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Áp dụng mẫu reset &lt;code&gt;0x9&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Chỉ dùng khi đã xác định mẫu phù hợp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Cảnh báo:&lt;/strong&gt; Không chọn ngẫu nhiên &lt;strong&gt;2. Std&lt;/strong&gt; hoặc &lt;strong&gt;3. Max&lt;/strong&gt;. Dùng sai mẫu có thể làm dữ liệu không phù hợp, khiến pin hoạt động sai, không nhận sạc hoặc phát sinh lỗi khác. Nếu chưa xác định được mẫu reset, chỉ ưu tiên &lt;strong&gt;1. Min&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Cách thực hiện&lt;span class="hx:absolute hx:-mt-20" id="cách-thực-hiện-3"&gt;&lt;/span&gt;
+&lt;a href="#c%c3%a1ch-th%e1%bb%b1c-hi%e1%bb%87n-3" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Kết nối pin, chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ đọc thành công.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Reset Tools → Advanced&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;F.Reset → 1. Min&lt;/strong&gt;, &lt;strong&gt;2. Std&lt;/strong&gt; hoặc &lt;strong&gt;3. Max&lt;/strong&gt; theo đúng loại bo mạch.&lt;/li&gt;
+&lt;li&gt;Chờ thiết bị báo hoàn tất.&lt;/li&gt;
+&lt;li&gt;Tháo pin, chờ vài giây rồi thử bằng bộ sạc Makita.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;7. Read MSG / Write MSG&lt;span class="hx:absolute hx:-mt-20" id="7-read-msg--write-msg"&gt;&lt;/span&gt;
+&lt;a href="#7-read-msg--write-msg" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Write MSG&lt;/strong&gt; ghi dữ liệu MSG từ một viên pin đang hoạt động bình thường sang viên pin cần sửa. Đây là phương án can thiệp sâu, chỉ dùng khi các chức năng reset thông thường không khắc phục được lỗi.&lt;/p&gt;
+&lt;h3&gt;Điều kiện tương thích&lt;span class="hx:absolute hx:-mt-20" id="điều-kiện-tương-thích"&gt;&lt;/span&gt;
+&lt;a href="#%c4%91i%e1%bb%81u-ki%e1%bb%87n-t%c6%b0%c6%a1ng-th%c3%adch" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Pin nguồn và pin đích nên có:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cùng model.&lt;/li&gt;
+&lt;li&gt;Cùng loại bo mạch.&lt;/li&gt;
+&lt;li&gt;Cùng cấu hình cell.&lt;/li&gt;
+&lt;li&gt;Cùng phiên bản phần cứng.&lt;/li&gt;
+&lt;li&gt;Cấu trúc dữ liệu MSG tương thích.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Bước 1 – Đọc dữ liệu từ pin tốt&lt;span class="hx:absolute hx:-mt-20" id="bước-1--đọc-dữ-liệu-từ-pin-tốt"&gt;&lt;/span&gt;
+&lt;a href="#b%c6%b0%e1%bb%9bc-1--%c4%91%e1%bb%8dc-d%e1%bb%af-li%e1%bb%87u-t%e1%bb%ab-pin-t%e1%bb%91t" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Kết nối viên pin đang hoạt động tốt.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ đọc thành công.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Read MSG&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Chờ thiết bị đọc và lưu dữ liệu MSG thành công.&lt;/li&gt;
+&lt;li&gt;Tháo viên pin tốt khỏi thiết bị.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Bước 2 – Ghi dữ liệu sang pin cần sửa&lt;span class="hx:absolute hx:-mt-20" id="bước-2--ghi-dữ-liệu-sang-pin-cần-sửa"&gt;&lt;/span&gt;
+&lt;a href="#b%c6%b0%e1%bb%9bc-2--ghi-d%e1%bb%af-li%e1%bb%87u-sang-pin-c%e1%ba%a7n-s%e1%bb%ada" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Kết nối viên pin bị lỗi.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ đọc thành công.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Write MSG&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Chờ thiết bị ghi dữ liệu thành công.&lt;/li&gt;
+&lt;li&gt;Tháo pin, kết nối lại rồi chọn &lt;strong&gt;Read Data&lt;/strong&gt; để kiểm tra.&lt;/li&gt;
+&lt;li&gt;Thử pin trên bộ sạc Makita.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Cảnh báo:&lt;/strong&gt; Không ghi dữ liệu MSG của model khác sang pin cần sửa nếu chưa xác định chắc chắn tính tương thích.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;8. Các chức năng khác&lt;span class="hx:absolute hx:-mt-20" id="8-các-chức-năng-khác"&gt;&lt;/span&gt;
+&lt;a href="#8-c%c3%a1c-ch%e1%bb%a9c-n%c4%83ng-kh%c3%a1c" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Set Cycles&lt;span class="hx:absolute hx:-mt-20" id="set-cycles"&gt;&lt;/span&gt;
+&lt;a href="#set-cycles" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Set Cycles&lt;/strong&gt; thay đổi giá trị số chu kỳ sạc/xả được lưu trong pin.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Kết nối pin, chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ đọc thành công.&lt;/li&gt;
+&lt;li&gt;Dùng nút mũi tên trái/phải tại mục &lt;strong&gt;Set Cycles&lt;/strong&gt; để chọn giá trị.&lt;/li&gt;
+&lt;li&gt;Nhấn &lt;strong&gt;Set Cycles&lt;/strong&gt; để ghi.&lt;/li&gt;
+&lt;li&gt;Chờ thiết bị thông báo hoàn tất.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Read Data&lt;/strong&gt; lần nữa để xác nhận giá trị mới.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Việc thay đổi Cycles chỉ sửa dữ liệu được lưu, không phục hồi dung lượng thực tế hoặc tình trạng vật lý của cell.&lt;/p&gt;
+&lt;h3&gt;Lock Test&lt;span class="hx:absolute hx:-mt-20" id="lock-test"&gt;&lt;/span&gt;
+&lt;a href="#lock-test" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Lock Test&lt;/strong&gt; đưa pin vào trạng thái khóa/lỗi được lựa chọn để kiểm tra, thử nghiệm hoặc chẩn đoán.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Kết nối pin, chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ đọc thành công.&lt;/li&gt;
+&lt;li&gt;Dùng nút mũi tên trái/phải tại mục &lt;strong&gt;Lock&lt;/strong&gt; để chọn trạng thái.&lt;/li&gt;
+&lt;li&gt;Kiểm tra kỹ lựa chọn rồi nhấn &lt;strong&gt;Lock: …&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Chờ thiết bị thông báo hoàn tất.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Read Data&lt;/strong&gt; lần nữa để kiểm tra trạng thái pin.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Cảnh báo:&lt;/strong&gt; Lock Test chỉ phục vụ thử nghiệm. Không sử dụng trên pin đang hoạt động bình thường nếu không có mục đích kiểm tra cụ thể.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;9. Quy trình nhanh&lt;span class="hx:absolute hx:-mt-20" id="9-quy-trình-nhanh"&gt;&lt;/span&gt;
+&lt;a href="#9-quy-tr%c3%acnh-nhanh" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Read Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Quick Reset
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓ nếu chưa khắc phục
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Read Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Full Unlock
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓ nếu đã mở khóa nhưng vẫn không nhận sạc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Read Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Charger Reconnect
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓ nếu vẫn chưa khắc phục
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Read Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Factory Reset — ưu tiên 1. Min
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓ nếu có pin nguồn và dữ liệu tương thích
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Kết nối pin tốt → Read Data → Read MSG
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓ kết nối pin cần sửa
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Read Data → Write MSG
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Kiểm tra phần cứng&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Nguyên tắc cần nhớ&lt;span class="hx:absolute hx:-mt-20" id="nguyên-tắc-cần-nhớ"&gt;&lt;/span&gt;
+&lt;a href="#nguy%c3%aan-t%e1%ba%afc-c%e1%ba%a7n-nh%e1%bb%9b" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Sau mỗi lần kết nối hoặc kết nối lại pin, luôn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ đọc thành công; các nút chức năng chỉ có thể thao tác sau bước này.&lt;/li&gt;
+&lt;li&gt;Ghi lại trạng thái pin trước khi reset hoặc mở khóa.&lt;/li&gt;
+&lt;li&gt;Bắt đầu từ chức năng ít can thiệp nhất.&lt;/li&gt;
+&lt;li&gt;Không dùng Factory Reset &lt;strong&gt;Std&lt;/strong&gt; hoặc &lt;strong&gt;Max&lt;/strong&gt; nếu chưa xác định đúng mẫu dữ liệu.&lt;/li&gt;
+&lt;li&gt;Không dùng Write MSG giữa các model pin không tương thích.&lt;/li&gt;
+&lt;li&gt;Sau mỗi bước, tháo pin, kết nối lại và kiểm tra bằng bộ sạc Makita (có thể dùng lock check để kiểm tra trạng thái link).&lt;/li&gt;
+&lt;li&gt;Nếu thao tác phần mềm báo thành công nhưng pin vẫn không hoạt động, chuyển sang kiểm tra phần cứng thay vì tiếp tục reset nhiều lần.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Battery Service Tool: Makita LXT IC dài – F0513</title><link>/docs/battery-service-tool/makita-lxt-f0513/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/battery-service-tool/makita-lxt-f0513/</guid><description>
+&lt;p&gt;Quy trình xử lý pin &lt;strong&gt;Makita LXT IC dài – F0513&lt;/strong&gt; gồm hai bước: lấy mã lỗi để xác định nguyên nhân, sau đó xóa lỗi và mở khóa pin.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Lưu ý an toàn:&lt;/strong&gt; Không tiếp tục sử dụng hoặc sạc nếu pin phồng, rò rỉ, có mùi lạ hoặc nóng bất thường. Nếu kết quả phân tích cho thấy lỗi cell hoặc phần cứng, cần kiểm tra và khắc phục nguyên nhân để tránh pin bị khóa lại.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Nguyên tắc bắt buộc:&lt;/strong&gt; Sau mỗi lần kết nối hoặc kết nối lại pin, phải chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ đọc thành công. Khi đó các nút Quick Reset và Full Unlock mới có thể thao tác.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Bước 1 – Quick Reset và phân tích Err Code&lt;span class="hx:absolute hx:-mt-20" id="bước-1--quick-reset-và-phân-tích-err-code"&gt;&lt;/span&gt;
+&lt;a href="#b%c6%b0%e1%bb%9bc-1--quick-reset-v%c3%a0-ph%c3%a2n-t%c3%adch-err-code" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Kết nối pin Makita LXT F0513 với Battery Service Tool.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ thiết bị đọc dữ liệu thành công. Sau bước này, nút Quick Reset mới có thể thao tác.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Reset Tools → Quick Reset&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Sau khi thực hiện, màn hình thiết bị sẽ hiển thị mã &lt;strong&gt;Err Code&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Ghi lại chính xác mã Err Code đang hiển thị.&lt;/li&gt;
+&lt;li&gt;Mở &lt;a href="/f0513.html"&gt;trang phân tích mã Err Code F0513&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Nhập mã Err Code và chọn &lt;strong&gt;Xem hướng xử lý&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Đọc kết quả để xác định nguyên nhân khiến pin bị khóa.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Bước 2 – Full Unlock&lt;span class="hx:absolute hx:-mt-20" id="bước-2--full-unlock"&gt;&lt;/span&gt;
+&lt;a href="#b%c6%b0%e1%bb%9bc-2--full-unlock" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Quay lại Battery Service Tool.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Read Data&lt;/strong&gt; và chờ thiết bị đọc dữ liệu thành công. Sau bước này, nút Full Unlock mới có thể thao tác.&lt;/li&gt;
+&lt;li&gt;Chọn &lt;strong&gt;Reset Tools → Full Unlock&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Chờ thiết bị thông báo hoàn tất.&lt;/li&gt;
+&lt;li&gt;Tháo pin khỏi thiết bị và chờ vài giây.&lt;/li&gt;
+&lt;li&gt;Kết nối lại pin, chọn &lt;strong&gt;Read Data&lt;/strong&gt; và kiểm tra trạng thái.&lt;/li&gt;
+&lt;li&gt;Thử pin bằng bộ sạc Makita phù hợp.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Full Unlock&lt;/strong&gt; hoàn tất quá trình xóa lỗi và mở khóa pin.&lt;/p&gt;
+&lt;h2&gt;Quy trình nhanh&lt;span class="hx:absolute hx:-mt-20" id="quy-trình-nhanh"&gt;&lt;/span&gt;
+&lt;a href="#quy-tr%c3%acnh-nhanh" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Read Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Quick Reset
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Lấy mã Err Code trên màn hình
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Nhập mã vào trang phân tích F0513
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Xác định nguyên nhân gây khóa
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Read Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Full Unlock
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Xóa lỗi và mở khóa hoàn tất&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>
