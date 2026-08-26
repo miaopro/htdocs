@@ -1,0 +1,26 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MeV – Bta100</title><link>/tags/bta100/</link><description>Recent content in Bta100 on MeV</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/tags/bta100/index.xml" rel="self" type="application/rss+xml"/><item><title>Hướng dẫn chọn mua BTA100</title><link>/docs/may-han-cell/chon-bta100/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/may-han-cell/chon-bta100/</guid><description>
+&lt;h2&gt;Giới thiệu&lt;span class="hx:absolute hx:-mt-20" id="giới-thiệu"&gt;&lt;/span&gt;
+&lt;a href="#gi%e1%bb%9bi-thi%e1%bb%87u" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Triac &lt;strong&gt;BTA100&lt;/strong&gt; được dùng nhiều trong các thiết bị công suất như máy hàn cell, bộ điều khiển tải AC… Tuy nhiên thị trường hiện có rất nhiều loại không rõ nguồn gốc, rất dễ mua nhầm hàng kém chất lượng. Dưới đây là kinh nghiệm rút ra từ quá trình test thực tế.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;1. Hãng ST KHÔNG sản xuất BTA100&lt;span class="hx:absolute hx:-mt-20" id="1-hãng-st-không-sản-xuất-bta100"&gt;&lt;/span&gt;
+&lt;a href="#1-h%c3%a3ng-st-kh%c3%b4ng-s%e1%ba%a3n-xu%e1%ba%a5t-bta100" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="/docs/may-han-cell/chon-bta100/ST-fake.jpg" alt="BTA100 logo ST (hàng giả)" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;Trên thị trường có nhiều BTA100 được khắc laze &lt;strong&gt;logo hãng ST&lt;/strong&gt; (giả dạng hãng sản xuất linh kiện uy tín). Nếu thấy BTA100 in &lt;strong&gt;logo ST&lt;/strong&gt;, cho dù chữ in sắc nét tới đâu thì &lt;strong&gt;100% là hàng giả&lt;/strong&gt;. Vì dòng BTA100 &lt;strong&gt;không hề&lt;/strong&gt; nằm trong danh mục sản phẩm của hãng STMicroelectronics.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;2. BTA100 dập chìm HSDO&lt;span class="hx:absolute hx:-mt-20" id="2-bta100-dập-chìm-hsdo"&gt;&lt;/span&gt;
+&lt;a href="#2-bta100-d%e1%ba%adp-ch%c3%acm-hsdo" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;BTA100 có xuất xứ TQ, chủ yếu do hãng HSDO sản xuất. Loại này dập chìm &lt;strong&gt;HSDO&lt;/strong&gt; không phải hàng giả, nhưng &lt;strong&gt;chất lượng không đồng nhất&lt;/strong&gt;. Mỗi shop nhập từ một nguồn khác nhau: có shop lấy loại 1, có shop lấy loại 2–3 nên chất lượng cũng khác nhau.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;3. Loại BTA100 đề xuất&lt;span class="hx:absolute hx:-mt-20" id="3-loại-bta100-đề-xuất"&gt;&lt;/span&gt;
+&lt;a href="#3-lo%e1%ba%a1i-bta100-%c4%91%e1%bb%81-xu%e1%ba%a5t" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="/docs/may-han-cell/chon-bta100/real.jpg" alt="Ảnh BTA100 đề xuất" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;Qua quá trình mua thử nghiệm và kiểm chứng thực tế trong các máy hàn cell, mình và các anh em kỹ thuật đã xác định được một số nguồn BTA100 tốt và ổn định mà anh em có thể yên tâm tham khảo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🔗 Link sản phẩm:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://s.shopee.vn/4ArshrZxlQ"target="_blank" rel="noopener"&gt;https://s.shopee.vn/4ArshrZxlQ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Phân loại sản phẩm nên chọn: 1200V&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;4. Lời khuyên nhanh&lt;span class="hx:absolute hx:-mt-20" id="4-lời-khuyên-nhanh"&gt;&lt;/span&gt;
+&lt;a href="#4-l%e1%bb%9di-khuy%c3%aan-nhanh" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Không mua BTA100 logo &lt;strong&gt;ST&lt;/strong&gt; (vì hàng fake 100%)&lt;/li&gt;
+&lt;li&gt;Với HSDO: chọn shop uy tín theo danh sách bên trên.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;</description></item></channel></rss>

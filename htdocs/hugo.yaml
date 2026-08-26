@@ -1,0 +1,54 @@
+# Hugo configuration file
+title: MeV
+staticDir: static
+
+# import hextra as module
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+
+  # enable hextra syntax highlight
+  highlight:
+    noClasses: false
+
+menu:
+  main:
+    - name: Tài liệu
+      pageRef: /docs
+      weight: 1
+    - name: Thông tin
+      pageRef: /about
+      weight: 2
+    - name: Search
+      weight: 3
+      params:
+        type: search
+    - name: My My
+      weight: 4
+      url: "https://facebook.com/my.my.63808/"
+      params:
+        icon: facebook
+    - name: Liên hệ
+      weight: 5
+      url: "mailto:admin@megavon.net"
+      params:
+        icon: mail
+
+params:
+  navbar:
+    displayTitle: true
+    displayLogo: true
+
+  footer:
+    displayCopyright: false
+    displayPoweredBy: false
+
+  editURL:
+    enable: false
+    base: ""

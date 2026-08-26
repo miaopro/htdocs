@@ -1,0 +1,114 @@
+.home-avatar {
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  margin: 1.5rem auto 0.5rem;
+  border: 3px solid #fff;
+  border-radius: 9999px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgb(15 23 42 / 18%);
+}
+
+.home-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.75rem auto 3rem;
+  text-align: center;
+}
+
+.home-profile__tagline {
+  margin: 0;
+  color: #475569;
+  font-size: clamp(1.05rem, 3vw, 1.35rem);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
+.home-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.home-social__link {
+  display: inline-flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  min-width: 2.25rem;
+  flex: 0 0 2.25rem;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  color: #475569;
+  line-height: 0;
+  transition: border-color 160ms ease, color 160ms ease, transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.home-social__link:hover {
+  border-color: #64748b;
+  color: #0f172a;
+  box-shadow: 0 6px 18px rgb(15 23 42 / 12%);
+  transform: translateY(-2px);
+}
+
+.home-social__link:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.home-social__link .hextra-icon {
+  display: inline-flex;
+  width: 1.05rem;
+  height: 1.05rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-social__link svg {
+  display: block;
+  width: 1.05rem;
+  height: 1.05rem;
+  max-width: 1.05rem;
+  max-height: 1.05rem;
+  flex: none;
+}
+
+.dark .home-profile__tagline {
+  color: #cbd5e1;
+}
+
+.dark .home-social__link {
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+.dark .home-social__link:hover {
+  border-color: #94a3b8;
+  color: #f8fafc;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 35%);
+}
+
+@media (max-width: 640px) {
+  .home-avatar {
+    width: 6rem;
+    height: 6rem;
+    margin-top: 1rem;
+  }
+
+  .home-profile {
+    margin-bottom: 2.25rem;
+  }
+
+  .home-social {
+    margin-top: 1.25rem;
+  }
+
+}

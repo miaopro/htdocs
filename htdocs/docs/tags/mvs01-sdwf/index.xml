@@ -1,0 +1,70 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MeV – Mvs01-Sdwf</title><link>/tags/mvs01-sdwf/</link><description>Recent content in Mvs01-Sdwf on MeV</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/tags/mvs01-sdwf/index.xml" rel="self" type="application/rss+xml"/><item><title>Hướng dẫn nhanh mạch MVS01</title><link>/docs/may-han-cell/mvs01-huong-dan-nhanh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/may-han-cell/mvs01-huong-dan-nhanh/</guid><description>
+&lt;figure&gt;&lt;img src="/docs/may-han-cell/mvs01-huong-dan-nhanh/cover.jpg"
+alt="Mạch MVS01-SDWF"&gt;
+&lt;/figure&gt;
+&lt;h2&gt;1. Đồng bộ điện áp hiển thị trên mạch&lt;span class="hx:absolute hx:-mt-20" id="1-đồng-bộ-điện-áp-hiển-thị-trên-mạch"&gt;&lt;/span&gt;
+&lt;a href="#1-%c4%91%e1%bb%93ng-b%e1%bb%99-%c4%91i%e1%bb%87n-%c3%a1p-hi%e1%bb%83n-th%e1%bb%8b-tr%c3%aan-m%e1%ba%a1ch" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Tắt nguồn điện.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ấn giữ núm xoay&lt;/strong&gt;, sau đó &lt;strong&gt;bật nguồn&lt;/strong&gt; để vào Setup&lt;/li&gt;
+&lt;li&gt;Tại vol Calib: Chỉnh cho &lt;strong&gt;điện áp hiển thị bằng với điện áp thực tế&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Để lưu và thoát: Đạp cóc → Khởi động&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;2. Chỉnh thông số hàn&lt;span class="hx:absolute hx:-mt-20" id="2-chỉnh-thông-số-hàn"&gt;&lt;/span&gt;
+&lt;a href="#2-ch%e1%bb%89nh-th%c3%b4ng-s%e1%bb%91-h%c3%a0n" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Ví dụ hiển thị trên màn hình:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;Vol: 220 W: 82
+P1 25 C 50 M1 60&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Giải thích thông số&lt;span class="hx:absolute hx:-mt-20" id="giải-thích-thông-số"&gt;&lt;/span&gt;
+&lt;a href="#gi%e1%ba%a3i-th%c3%adch-th%c3%b4ng-s%e1%bb%91" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Quy ước ký hiệu xung:&lt;/strong&gt; Mỗi xung được ghi theo dạng &lt;code&gt;[Chữ][Số] [Công suất]&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Chữ cái&lt;/strong&gt; cho biết loại xung: &lt;strong&gt;P&lt;/strong&gt; = xung mồi (Pre), &lt;strong&gt;M&lt;/strong&gt; = xung chính (Main).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chữ số ngay sau chữ cái&lt;/strong&gt; là thời gian xung, tính theo bội số &lt;strong&gt;10 ms&lt;/strong&gt;: &lt;code&gt;P1&lt;/code&gt; = 10 ms, &lt;code&gt;P2&lt;/code&gt; = 20 ms, &lt;code&gt;M1&lt;/code&gt; = 10 ms, &lt;code&gt;M2&lt;/code&gt; = 20 ms&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Số đứng sau (cách một khoảng trắng)&lt;/strong&gt; là &lt;strong&gt;công suất&lt;/strong&gt;, tính theo &lt;strong&gt;%&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ví dụ: &lt;code&gt;P1 25&lt;/code&gt; = xung mồi, thời gian &lt;strong&gt;10 ms&lt;/strong&gt;, công suất &lt;strong&gt;25%&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;🔹 Vol: 220 W: 82 - Thông tin&lt;span class="hx:absolute hx:-mt-20" id="-vol-220-w-----82---thông-tin"&gt;&lt;/span&gt;
+&lt;a href="#-vol-220-w-----82---th%c3%b4ng-tin" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Vol: 220 là đồng hồ hiển thị điện lưới.&lt;/li&gt;
+&lt;li&gt;W: 80 là bộ đếm số lần hàn.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;🔹 P1 25 — Xung hàn mồi (Pre)&lt;span class="hx:absolute hx:-mt-20" id="-p1-25--xung-hàn-mồi-pre"&gt;&lt;/span&gt;
+&lt;a href="#-p1-25--xung-h%c3%a0n-m%e1%bb%93i-pre" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;P&lt;/strong&gt; = xung mồi; &lt;strong&gt;1&lt;/strong&gt; = thời gian xung &lt;strong&gt;10 ms&lt;/strong&gt; (nếu &lt;code&gt;P2&lt;/code&gt; thì là 20 ms); &lt;strong&gt;25&lt;/strong&gt; = công suất &lt;strong&gt;25%&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Đây là &lt;strong&gt;xung làm mềm kẽm&lt;/strong&gt; trước khi hàn chính.&lt;/li&gt;
+&lt;li&gt;Khuyến nghị để nhỏ: &lt;strong&gt;15% – 25%&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;🔹 C 50 — Thời gian nghỉ&lt;span class="hx:absolute hx:-mt-20" id="-c-50--thời-gian-nghỉ"&gt;&lt;/span&gt;
+&lt;a href="#-c-50--th%e1%bb%9di-gian-ngh%e1%bb%89" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;C 50 = &lt;strong&gt;50 ms&lt;/strong&gt; nghỉ giữa xung mồi và xung chính.&lt;/li&gt;
+&lt;li&gt;Điều chỉnh phù hợp với biến áp vì nó liên quan đến độ đẹp của mối hàn.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;🔹 M1 60 — Xung hàn chính (Main)&lt;span class="hx:absolute hx:-mt-20" id="-m1-60--xung-hàn-chính-main"&gt;&lt;/span&gt;
+&lt;a href="#-m1-60--xung-h%c3%a0n-ch%c3%adnh-main" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;M&lt;/strong&gt; = xung chính; &lt;strong&gt;1&lt;/strong&gt; = thời gian xung &lt;strong&gt;10 ms&lt;/strong&gt; (nếu &lt;code&gt;M2&lt;/code&gt; thì là 20 ms); &lt;strong&gt;60&lt;/strong&gt; = công suất &lt;strong&gt;60%&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Đây là &lt;strong&gt;xung hàn chính&lt;/strong&gt;, ảnh hưởng trực tiếp đến độ ngấu.&lt;/li&gt;
+&lt;li&gt;Nên chỉnh cao hơn P1 và tùy theo độ dày kẽm.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. Video/ Link&lt;span class="hx:absolute hx:-mt-20" id="3-video-link"&gt;&lt;/span&gt;
+&lt;a href="#3-video-link" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Hướng dẫn chi tiết Mạch Rồng: &lt;a href="/docs/may-han-cell/mach-rong-chi-tiet/"&gt;Tài liệu&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Cách chọn BTA100: &lt;a href="/docs/may-han-cell/chon-bta100/"&gt;Tài liệu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Liên hệ My My: &lt;a href="https://www.facebook.com/my.my.63808"target="_blank" rel="noopener"&gt;facebook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Gợi ý:&lt;/strong&gt; Mỗi biến áp khác nhau sẽ có một thông số khác nhau, cho nên cần chỉnh theo nguyên lý. Sau đó hàn thử và điều chỉnh phù hợp cho đến khi đạt được kết quả tối ưu.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item></channel></rss>
