@@ -6,11 +6,22 @@ type: docs
 weight: 4
 ---
 
-Pin **HiKOKI** chỉ sử dụng chức năng **Full Unlock**. Loại này không hiển thị Err Code và không có bước phân tích mã lỗi.
+Pin **HiKOKI** chỉ sử dụng chức năng **Full Unlock**. Loại này không hiển thị mã lỗi chi tiết; sau khi **Read Data**, màn hình chỉ hiển thị hai cờ trạng thái **Err** (lỗi) và **Fuse** (cầu chì).
 
 > **Lưu ý an toàn:** Không tiếp tục sử dụng hoặc sạc nếu pin phồng, rò rỉ, có mùi lạ hoặc nóng bất thường. Full Unlock chỉ xóa lỗi và mở khóa; chức năng này không khắc phục cell hoặc phần cứng bị hỏng.
 
 > **Nguyên tắc bắt buộc:** Sau mỗi lần kết nối hoặc kết nối lại pin, phải chọn **Read Data** và chờ đọc thành công. Khi đó nút Full Unlock mới có thể thao tác.
+
+## Cách đọc trạng thái lỗi và cầu chì
+
+Trong đó, **Y** nghĩa là trạng thái đang được ghi nhận, còn **N** nghĩa là không ghi nhận trạng thái đó.
+
+| Trạng thái hiển thị | Ý nghĩa |
+| --- | --- |
+| `Err:Y Fuse:N` | Pin đang ghi nhận lỗi, nhưng cầu chì chưa kích hoạt. |
+| `Err:N Fuse:Y` | Không ghi nhận cờ lỗi, nhưng cầu chì đã kích hoạt. |
+| `Err:Y Fuse:Y` | Pin vừa ghi nhận lỗi vừa kích hoạt cầu chì; pin đang bị khóa. |
+| `Err:N Fuse:N` | Không ghi nhận lỗi, cầu chì chưa kích hoạt; pin không bị khóa. |
 
 ## Quy trình Full Unlock
 
