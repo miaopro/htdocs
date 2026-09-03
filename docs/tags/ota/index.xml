@@ -1,0 +1,291 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MeV – Ota</title><link>/tags/ota/</link><description>Recent content in Ota on MeV</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/tags/ota/index.xml" rel="self" type="application/rss+xml"/><item><title>Battery Service Tool: Cập nhật firmware qua Wi-Fi OTA</title><link>/docs/battery-service-tool/cap-nhat-firmware-ota/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/battery-service-tool/cap-nhat-firmware-ota/</guid><description>
+&lt;p&gt;Battery Service Tool hỗ trợ cập nhật firmware qua Wi-Fi OTA (Over-the-Air), không cần kết nối thiết bị với máy tính. Thiết bị sẽ tự kiểm tra phiên bản mới, tải firmware từ máy chủ và khởi động lại sau khi cập nhật thành công.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Cảnh báo:&lt;/strong&gt; Tuyệt đối không tắt nguồn, rút cáp nguồn hoặc khởi động lại Battery Service Tool trong khi thiết bị đang tải và ghi firmware. Mất nguồn ở giai đoạn này có thể làm quá trình cập nhật thất bại.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Chuẩn bị trước khi cập nhật&lt;span class="hx:absolute hx:-mt-20" id="chuẩn-bị-trước-khi-cập-nhật"&gt;&lt;/span&gt;
+&lt;a href="#chu%e1%ba%a9n-b%e1%bb%8b-tr%c6%b0%e1%bb%9bc-khi-c%e1%ba%adp-nh%e1%ba%adt" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Hãy bảo đảm:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Battery Service Tool được cấp nguồn ổn định.&lt;/li&gt;
+&lt;li&gt;Có mạng Wi-Fi &lt;strong&gt;2.4 GHz&lt;/strong&gt; đang kết nối Internet.&lt;/li&gt;
+&lt;li&gt;Biết chính xác tên và mật khẩu Wi-Fi.&lt;/li&gt;
+&lt;li&gt;Có điện thoại để cấu hình Wi-Fi nếu thiết bị chưa lưu mạng.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Quy trình nhanh&lt;span class="hx:absolute hx:-mt-20" id="quy-trình-nhanh"&gt;&lt;/span&gt;
+&lt;a href="#quy-tr%c3%acnh-nhanh" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Khởi động Battery Service Tool
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Service Mode
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Kết nối Wi-Fi 2.4 GHz
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Kiểm tra phiên bản
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Start update
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Chờ cập nhật 100% và thiết bị tự khởi động lại
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Kiểm tra phiên bản mới&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Bước 1: Vào chế độ cập nhật&lt;span class="hx:absolute hx:-mt-20" id="bước-1-vào-chế-độ-cập-nhật"&gt;&lt;/span&gt;
+&lt;a href="#b%c6%b0%e1%bb%9bc-1-v%c3%a0o-ch%e1%ba%bf-%c4%91%e1%bb%99-c%e1%ba%adp-nh%e1%ba%adt" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Khởi động Battery Service Tool và chờ màn hình chính xuất hiện.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nhấn &lt;strong&gt;Service Mode&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tại màn hình &lt;strong&gt;Software Information&lt;/strong&gt;, kiểm tra các thông tin:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Phiên bản firmware hiện tại.&lt;/li&gt;
+&lt;li&gt;Thông tin kích hoạt.&lt;/li&gt;
+&lt;li&gt;Trạng thái kết nối Wi-Fi.&lt;/li&gt;
+&lt;li&gt;Phiên bản firmware mới nhất.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Khi vào Service Mode, thiết bị sẽ tạm dừng các chức năng giao tiếp với pin và bắt đầu kết nối Wi-Fi.&lt;/p&gt;
+&lt;h2&gt;Bước 2: Kết nối Wi-Fi&lt;span class="hx:absolute hx:-mt-20" id="bước-2-kết-nối-wi-fi"&gt;&lt;/span&gt;
+&lt;a href="#b%c6%b0%e1%bb%9bc-2-k%e1%ba%bft-n%e1%bb%91i-wi-fi" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Thiết bị đã lưu Wi-Fi&lt;span class="hx:absolute hx:-mt-20" id="thiết-bị-đã-lưu-wi-fi"&gt;&lt;/span&gt;
+&lt;a href="#thi%e1%ba%bft-b%e1%bb%8b-%c4%91%c3%a3-l%c6%b0u-wi-fi" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Battery Service Tool sẽ tự động kết nối lại mạng đã lưu. Chờ đến khi màn hình hiển thị:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;WiFi: Online &amp;lt;tên Wi-Fi&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Sau khi kết nối Internet, thiết bị sẽ tự động kiểm tra phiên bản firmware mới.&lt;/p&gt;
+&lt;h3&gt;Thiết bị chưa cấu hình hoặc không kết nối được Wi-Fi&lt;span class="hx:absolute hx:-mt-20" id="thiết-bị-chưa-cấu-hình-hoặc-không-kết-nối-được-wi-fi"&gt;&lt;/span&gt;
+&lt;a href="#thi%e1%ba%bft-b%e1%bb%8b-ch%c6%b0a-c%e1%ba%a5u-h%c3%acnh-ho%e1%ba%b7c-kh%c3%b4ng-k%e1%ba%bft-n%e1%bb%91i-%c4%91%c6%b0%e1%bb%a3c-wi-fi" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Khi màn hình hiển thị:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Setup: MeV-BST&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;hãy thực hiện các bước sau trên điện thoại:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Mở &lt;strong&gt;Cài đặt Wi-Fi&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kết nối với mạng &lt;strong&gt;MeV-BST&lt;/strong&gt;. Mạng cấu hình này không có mật khẩu.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nếu điện thoại cảnh báo mạng không có Internet, chọn tiếp tục duy trì kết nối.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chờ trang cấu hình Wi-Fi tự động mở. Nếu trang không xuất hiện, mở trình duyệt và truy cập &lt;code&gt;http://192.168.4.1&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nhấn &lt;strong&gt;Configure WiFi&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chọn mạng Wi-Fi 2.4 GHz cần sử dụng.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nhập đúng mật khẩu Wi-Fi.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nhấn &lt;strong&gt;Save/Connect&lt;/strong&gt; và chờ thiết bị kết nối.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Xác nhận màn hình Battery Service Tool hiển thị:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;WiFi: Online &amp;lt;tên Wi-Fi&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Lưu ý:&lt;/strong&gt; Điểm phát &lt;code&gt;MeV-BST&lt;/code&gt; chỉ hoạt động trong khoảng &lt;strong&gt;5 phút&lt;/strong&gt;. Nếu hết thời gian, nhấn &lt;strong&gt;Exit Update Mode&lt;/strong&gt;, chờ thiết bị khởi động lại rồi vào &lt;strong&gt;Service Mode&lt;/strong&gt; lần nữa.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Bước 3: Kiểm tra phiên bản firmware&lt;span class="hx:absolute hx:-mt-20" id="bước-3-kiểm-tra-phiên-bản-firmware"&gt;&lt;/span&gt;
+&lt;a href="#b%c6%b0%e1%bb%9bc-3-ki%e1%bb%83m-tra-phi%c3%aan-b%e1%ba%a3n-firmware" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Sau khi kết nối Internet, Battery Service Tool tự lấy thông tin phiên bản từ máy chủ.&lt;/p&gt;
+&lt;p&gt;Nếu thiết bị đang dùng phiên bản mới nhất, màn hình hiển thị:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Latest Version: ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Status: Up to date&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Trong trường hợp này, nút cập nhật không được kích hoạt và bạn không cần thực hiện thêm thao tác nào.&lt;/p&gt;
+&lt;p&gt;Nếu có firmware mới, màn hình hiển thị:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Latest Version: ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Status: Update available&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Nút &lt;strong&gt;Start update&lt;/strong&gt; sẽ được kích hoạt.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Trong lần kết nối đầu tiên, thiết bị có thể tự khởi động lại để đồng bộ thông tin kích hoạt. Sau khi máy khởi động xong, hãy vào lại &lt;strong&gt;Service Mode&lt;/strong&gt; để tiếp tục kiểm tra phiên bản.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Bước 4: Tiến hành cập nhật&lt;span class="hx:absolute hx:-mt-20" id="bước-4-tiến-hành-cập-nhật"&gt;&lt;/span&gt;
+&lt;a href="#b%c6%b0%e1%bb%9bc-4-ti%e1%ba%bfn-h%c3%a0nh-c%e1%ba%adp-nh%e1%ba%adt" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Nhấn &lt;strong&gt;Start update&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chờ thiết bị kết nối máy chủ, tải và ghi firmware. Màn hình sẽ lần lượt hiển thị các trạng thái tương tự:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connecting to server...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Requesting firmware...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Writing firmware...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Updating firmware...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Progress: xx%&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Giữ nguyên nguồn điện và kết nối Wi-Fi cho đến khi quá trình hoàn tất.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Trong lúc cập nhật:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Không tắt nguồn hoặc rút cáp nguồn.&lt;/li&gt;
+&lt;li&gt;Không khởi động lại thiết bị.&lt;/li&gt;
+&lt;li&gt;Không ngắt hoặc thay đổi mạng Wi-Fi.&lt;/li&gt;
+&lt;li&gt;Không thao tác với các nút khác.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Các nút &lt;strong&gt;Start update&lt;/strong&gt; và &lt;strong&gt;Exit Update Mode&lt;/strong&gt; sẽ bị khóa trong khi firmware đang được tải và ghi. Đây là hoạt động bình thường của thiết bị.&lt;/p&gt;
+&lt;h2&gt;Bước 5: Hoàn tất và kiểm tra&lt;span class="hx:absolute hx:-mt-20" id="bước-5-hoàn-tất-và-kiểm-tra"&gt;&lt;/span&gt;
+&lt;a href="#b%c6%b0%e1%bb%9bc-5-ho%c3%a0n-t%e1%ba%a5t-v%c3%a0-ki%e1%bb%83m-tra" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Khi cập nhật thành công, màn hình hiển thị:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Update successful!
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Rebooting...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Thiết bị sẽ tự khởi động lại sau khoảng 1,5 giây. Sau khi màn hình chính xuất hiện:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Kiểm tra số phiên bản firmware hiển thị trên thiết bị.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vào lại &lt;strong&gt;Service Mode&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Xác nhận màn hình hiển thị:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Status: Up to date&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Firmware của Battery Service Tool đã được cập nhật thành công khi phiên bản mới hiển thị đúng và trạng thái là &lt;strong&gt;Up to date&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;Xử lý sự cố&lt;span class="hx:absolute hx:-mt-20" id="xử-lý-sự-cố"&gt;&lt;/span&gt;
+&lt;a href="#x%e1%bb%ad-l%c3%bd-s%e1%bb%b1-c%e1%bb%91" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Hiện tượng&lt;/th&gt;
+&lt;th&gt;Cách xử lý&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Không thấy mạng &lt;code&gt;MeV-BST&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Nhấn &lt;strong&gt;Exit Update Mode&lt;/strong&gt;, chờ thiết bị khởi động lại rồi vào &lt;strong&gt;Service Mode&lt;/strong&gt; lần nữa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Trang cấu hình Wi-Fi không tự mở&lt;/td&gt;
+&lt;td&gt;Giữ điện thoại kết nối với &lt;code&gt;MeV-BST&lt;/code&gt;, mở trình duyệt và truy cập &lt;code&gt;http://192.168.4.1&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hiển thị &lt;code&gt;Not found&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Kiểm tra router đang bật và bảo đảm mạng được chọn là Wi-Fi 2.4 GHz.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hiển thị &lt;code&gt;Failed&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Kiểm tra và nhập lại đúng mật khẩu Wi-Fi.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dừng ở &lt;code&gt;Checking...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Kiểm tra kết nối Internet. Nếu vẫn không tiếp tục, thoát Update Mode rồi thực hiện lại.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Xuất hiện lỗi HTTP, download hoặc write&lt;/td&gt;
+&lt;td&gt;Giữ nguyên nguồn cấp, kiểm tra Internet rồi nhấn &lt;strong&gt;Start update&lt;/strong&gt; để thử lại khi nút được mở.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Phần trăm cập nhật đang hiển thị nhưng chưa hoàn tất&lt;/td&gt;
+&lt;td&gt;Tiếp tục chờ và tuyệt đối không tắt nguồn thiết bị.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item></channel></rss>

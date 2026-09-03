@@ -14,4 +14,5 @@ Hướng dẫn sử dụng Battery Service Tool để đọc dữ liệu, chẩn
   {{< card link="makita-lxt-f0513/" title="Pin Makita LXT IC dài - F0513" subtitle="Read Data → Quick Reset lấy Err Code → phân tích nguyên nhân → Read Data → Full Unlock." icon="chip" >}}
   {{< card link="makita-xgt/" title="Pin Makita XGT" subtitle="Read Data để kích hoạt chức năng → Full Unlock → kết nối lại và kiểm tra." icon="chip" >}}
   {{< card link="hikoki/" title="Pin HiKOKI" subtitle="Read Data để kích hoạt chức năng → Full Unlock → kết nối lại và kiểm tra." icon="chip" >}}
+  {{< card link="cap-nhat-firmware-ota/" title="Cập nhật firmware qua Wi-Fi OTA" subtitle="Kết nối Wi-Fi, kiểm tra phiên bản và cập nhật firmware mới cho Battery Service Tool." icon="refresh" >}}
 {{< /cards >}}
